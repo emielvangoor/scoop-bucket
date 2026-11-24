@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "description": "Keyboard-first terminal client for Paseo coding agents",
+  "homepage": "https://github.com/emielvangoor/paseo-tui",
+  "license": "Apache-2.0",
+  "notes": "paseo-tui needs a Paseo daemon (the Paseo desktop app runs one) and Node.js or the Paseo app.",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/emielvangoor/paseo-tui/releases/download/v0.2.0/paseo-tui_windows_amd64.zip",
+      "hash": "a6bb43be3183c2dabbe291abf2236c8cbb280bfccfcfecc32f5ca21fd976e023",
+      "extract_dir": "paseo-tui_windows_amd64"
+    },
+    "arm64": {
+      "url": "https://github.com/emielvangoor/paseo-tui/releases/download/v0.2.0/paseo-tui_windows_arm64.zip",
+      "hash": "48feeb04d714fb4286f5cd1d86ffac8d1565eaddb53527d9f11387db4deb5ece",
+      "extract_dir": "paseo-tui_windows_arm64"
+    }
+  },
+  "bin": "paseo-tui.exe",
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/emielvangoor/paseo-tui/releases/download/v$version/paseo-tui_windows_amd64.zip",
+        "extract_dir": "paseo-tui_windows_amd64"
+      },
+      "arm64": {
+        "url": "https://github.com/emielvangoor/paseo-tui/releases/download/v$version/paseo-tui_windows_arm64.zip",
+        "extract_dir": "paseo-tui_windows_arm64"
+      }
+    },
+    "hash": {
+      "url": "$baseurl/checksums.txt"
+    }
+  }
+}
